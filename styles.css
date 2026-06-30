@@ -1,0 +1,142 @@
+:root {
+  color-scheme: light;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-synthesis: none;
+  --background-start: #eef5ff;
+  --background-end: #f8faff;
+  --surface: rgba(255, 255, 255, 0.88);
+  --text: #172033;
+  --muted: #667085;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --ring: rgba(37, 99, 235, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100svh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 15%, rgba(96, 165, 250, 0.2), transparent 32rem),
+    linear-gradient(145deg, var(--background-start), var(--background-end));
+}
+
+.download-card {
+  width: min(100%, 560px);
+  padding: clamp(36px, 8vw, 64px) clamp(24px, 7vw, 56px);
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 28px;
+  box-shadow:
+    0 24px 60px rgba(30, 64, 175, 0.12),
+    0 8px 20px rgba(15, 23, 42, 0.06);
+  backdrop-filter: blur(12px);
+}
+
+.file-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 24px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  background: #e8f0ff;
+  border-radius: 22px;
+}
+
+.file-icon svg {
+  width: 38px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 7vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+p {
+  margin: 14px 0 32px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.download-button {
+  min-height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 30px;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 14px;
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.24);
+  font-size: 1.08rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 160ms ease,
+    background-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.download-button svg {
+  width: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.download-button:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 15px 28px rgba(37, 99, 235, 0.3);
+  transform: translateY(-2px);
+}
+
+.download-button:active {
+  transform: translateY(0);
+}
+
+.download-button:focus-visible {
+  outline: 4px solid var(--ring);
+  outline-offset: 4px;
+}
+
+@media (max-width: 420px) {
+  body {
+    padding: 16px;
+  }
+
+  .download-card {
+    border-radius: 22px;
+  }
+
+  .download-button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .download-button {
+    transition: none;
+  }
+}

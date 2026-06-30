@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Download the attached folder archive directly."
+    />
+    <title>Download File</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="download-card" aria-labelledby="page-title">
+      <div class="file-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img">
+          <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7l-5-5Z" />
+          <path d="M14 2v5h5M12 11v6m0 0-3-3m3 3 3-3" />
+        </svg>
+      </div>
+
+      <h1 id="page-title">Download File</h1>
+      <p>Your file is ready to download.</p>
+
+      <a
+        class="download-button"
+        href="files/folder.rar"
+        download="folder.rar"
+        aria-label="Download folder.rar"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14" />
+        </svg>
+        Download File
+      </a>
+    </main>
+  </body>
+</html>
